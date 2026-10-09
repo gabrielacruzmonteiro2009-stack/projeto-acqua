@@ -1,0 +1,181 @@
+:root {
+    --fonte-primaria: "Poppins", sans-serif;
+
+    /* Cores */
+    --cor-principal: #ffffff;
+    --cor-secundaria: #f1f1f1;
+    --cor-texto: #1c1c1c;
+    --cor-overlay: rgba(0, 0, 0,
+            0.6);
+    --cor-da-borda: #bbbbbb;
+    /* Camada escura transparente */
+
+    --cor-gradiente: linear-gradient(to right, #34495E, #3498DB);
+}
+
+/* Limpando estilos padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    list-style: none;
+}
+
+/* classes utilitárias */
+.visuallyhidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+
+
+
+/* Definindo estilos gerais */
+body {
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+}
+
+.section-contador {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("imagens/predio4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80dvh;
+    color: #ffffff;
+
+    /* Garante que o texto e os números fiquem bem visíveis por cima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contador {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-overlay);
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*alinhando os elesmentos no eixo :horizontal */
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    /* alinhando os elesmentos no eixo vertical */
+
+}
+
+
+.contador {
+    color: var(--cor-texto-secundaria);
+    text-shadow: .125rem .125rem #000000;
+}
+
+
+.contador p:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.novidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 80dvh;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 1rem;
+}
+
+.novidades h2 {
+    font-size: 2.375rem;
+    background: var(--cor-gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    margin-bottom: 1rem;
+}
+
+
+.novidades h2+p {
+    font-weight: 600;
+    font-family: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.novidades p+p {
+    font-size: 1rem;
+    max-width: 75ch;
+    margin-bottom: 2rem;
+}
+
+.novidades form {
+    background-color: (--cor-texto-secundaria);
+
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input,
+button {
+    height: 3rem;
+    border-radius: 3.375rem;
+}
+
+input {
+    border-width: 1px;
+    border-color: var(--cor-da-borda);
+    border-style: solid;
+    padding: 1rem;
+}
+
+button{
+    border: 0;
+    background: var(--cor-gradiente);
+    font-weight: 500;
+    color: var(--cor-principal);
+}
+
+.andamento{
+    /* padding: top/bottom left/right; */
+    padding: 4.75;
+    text-align: center;
+}
+
+
+.andamento h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.andamento p{
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+/* Provisório - Remover no futuro */
+img {
+    max-width: 100%;
+}
